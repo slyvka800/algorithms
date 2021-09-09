@@ -16,13 +16,14 @@ def merge_sort(input, order = SortOrder.ASC):
     merge_sort(left_array, order)
     merge_sort(right_array, order)
 
-    def compare(first_numb: int, second_numb: int, order: SortOrder):
+    def compare(first_numb, second_numb, order):
+        nonlocal comparisons
+        comparisons += 1
+
         if order == SortOrder.ASC:
             return first_numb > second_numb
         else:
             return second_numb > first_numb
-
-        comparisons += 1
 
     def merge(input: [int], first_array: [int], second_array: [int]):
         first_index = second_index = sorted_index = 0
@@ -48,3 +49,4 @@ def merge_sort(input, order = SortOrder.ASC):
                 sorted_index += 1
 
     merge(input, left_array, right_array)
+    return comparisons
