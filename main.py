@@ -24,6 +24,6 @@ if __name__ == "__main__":
     print("Execution time: ", time_elapsed, "ms")
     print(arr)
 
-    command = "python3 -m unittest /Users/pa_slyvka/PycharmProjects/MergeSort/test_merge_sort.py"
+    command = "python3 -m unittest test_merge_sort.py"
     os.system(command)
 
